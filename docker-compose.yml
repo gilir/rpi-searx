@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  searx:
+    image: gilir/rpi-searx
+    container_name: searx
+    restart: always
+    ports:
+      - "8888:8888"
+    networks:
+      - proxy-network
+    labels:
+      - "traefik.frontend.rule=Host:searx.lavergne.online"
+
+networks:
+  proxy-network:
+    external:
+      name: proxy-network
+
