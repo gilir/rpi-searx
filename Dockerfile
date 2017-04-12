@@ -1,5 +1,4 @@
-FROM armhf/alpine:edge
-#edge for pip 9.0.1
+FROM gilir/rpi-alpine
 
 WORKDIR /usr/local
 
